@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+  h1.mt-5= title
+  form(method="POST")
+    .form-group
+      label(for='title') Title
+      input#title.form-control(type='text', placeholder='Enter title', name="title", value=book.title)
+    .form-group
+      label(for='author') Author
+      input#author.form-control(type='text', placeholder='Enter author', name="author", value=book.author)
+    .form-group
+      label(for='numPages') Page Number
+      input#numPages.form-control(type='text', placeholder='Enter page numbers', name="numPages", value=book.numPages)
+    button.btn.btn-primary(type='submit') Submit
